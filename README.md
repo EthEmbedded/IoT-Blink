@@ -54,33 +54,30 @@ This assumes you have a Raspberry Pi and can terminal into it.
 
 5. In that project folder, install onoff and web3 modules
 
-5.1 Install onoff
-    'npm install onoff --save'
+        5.1 Install onoff
+        'npm install onoff --save'
     
-    I needed to apply fix to current release of Jessie Raspbian from errors from this command
-    source: https://www.raspberrypi.org/forums/viewtopic.php?f=66&t=127939
+        I needed to apply fix to current release of Jessie Raspbian from errors from this command
+        source: https://www.raspberrypi.org/forums/viewtopic.php?f=66&t=127939
 
-    edit file:
-    'sudo nano /usr/include/nodejs/deps/v8/include/v8.h'
+        edit file:
+        'sudo nano /usr/include/nodejs/deps/v8/include/v8.h'
+        in that file change:
+        enum WriteOptions {
+            NO_OPTIONS = 0,
+            HINT_MANY_WRITES_EXPECTED = 1,
+           NO_NULL_TERMINATION = 2,
+           PRESERVE_ASCII_NULL = 4,
+         };
 
-    in that file change:
-
-    enum WriteOptions {
-        NO_OPTIONS = 0,
-        HINT_MANY_WRITES_EXPECTED = 1,
-        NO_NULL_TERMINATION = 2,
-        PRESERVE_ASCII_NULL = 4,
-      };
-
-
-    to this:
-    enum WriteOptions {
-        NO_OPTIONS = 0,
-        HINT_MANY_WRITES_EXPECTED = 1,
-        NO_NULL_TERMINATION = 2,
-        PRESERVE_ASCII_NULL = 4,
-        REPLACE_INVALID_UTF8 = 0
-      };
+        to this:
+        enum WriteOptions {
+           NO_OPTIONS = 0,
+           HINT_MANY_WRITES_EXPECTED = 1,
+           NO_NULL_TERMINATION = 2,
+           PRESERVE_ASCII_NULL = 4,
+           REPLACE_INVALID_UTF8 = 0
+        };
  
  5.2 Install web3
     'npm install web3 --save'
