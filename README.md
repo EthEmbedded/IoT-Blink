@@ -1,5 +1,6 @@
 # IoT-Blink
 Simple Blink Example using Raspberry Pi, LED Light and Ethereum for Meetup Class
+
 All sources:
  - https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-ARM
  - http://thejackalofjavascript.com/getting-started-raspberry-pi-node-js/
