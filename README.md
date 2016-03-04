@@ -45,11 +45,15 @@ This assumes you have a Raspberry Pi and can terminal into it.
 
 
 3. Install npm on RPi 
-   'sudo apt-get install npm -y'
+   
+  'sudo apt-get install npm -y'
 
 4. Create node project folder:
+
   'mkdir blink'
+
   'cd blink'
+
   'npm init'
     
 
