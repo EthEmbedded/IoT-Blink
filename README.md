@@ -13,34 +13,34 @@ This assumes you have a Raspberry Pi and can terminal into it.
 
 1.  Install Geth - https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-ARM
 
-1.1 Get file: https://build.ethdev.com/builds/ARM%20Go%20master%20branch/geth-ARM-latest.tar.bz2 
-    (If needed, transfer file to Pi):
-    from mac: 'scp ~/Downloads/geth-ARM-latest.tar.bz2 pi@192.168.1.15:~'
-    (enter password to pi to complete transfer of file).
+        1.1 Get file: https://build.ethdev.com/builds/ARM%20Go%20master%20branch/geth-ARM-latest.tar.bz2 
+            (If needed, transfer file to Pi):
+             from mac: 'scp ~/Downloads/geth-ARM-latest.tar.bz2 pi@192.168.1.15:~'
+            (enter password to pi to complete transfer of file).
 
-1.2 ssh back into Pi: ssh pi@192.168.1.15 <- your Pi ip address here 
-    then untar (decompress) file
-    'cd ~'
-    'tar -vxjf geth-ARM-latest.tar.bz2'
-     then run from there or follow the bin installation step in the original link, and then run
-    './geth --fast console'
-     (‘—fast’ option for quick sync… otherwise this will take around 10 days on an average Pi vs. 1 day).
+        1.2 ssh back into Pi: ssh pi@192.168.1.15 <- your Pi ip address here 
+            then untar (decompress) file
+            'cd ~'
+            'tar -vxjf geth-ARM-latest.tar.bz2'
+             then run from there or follow the bin installation step in the original link, and then run
+            './geth --fast console'
+             (‘—fast’ option for quick sync… otherwise this will take around 10 days on an average Pi vs. 1 day).
      
 2.  Install NodeJS
-source:  http://thejackalofjavascript.com/getting-started-raspberry-pi-node-js/
-notes: can use a 2nd terminal window and get all the way to testing an LED with nodejs, but without ethereum, while the geth node is syncing. 
+    source:  http://thejackalofjavascript.com/getting-started-raspberry-pi-node-js/
+    notes: can use a 2nd terminal window and get all the way to testing an LED with nodejs, but without ethereum, while the geth node is     syncing. 
 
-2.1 (first update)
-    'sudo apt-get update -y && sudo apt-get upgrade -y'
+    2.1 (first update)
+       'sudo apt-get update -y && sudo apt-get upgrade -y'
 
-2.2 Check to see if your pi already has node with:
-    'node -v' 
-    If not, then download latest node version for arm:
-    'wget http://node-arm.herokuapp.com/node_latest_armhf.deb'
-    install that bad boy
-    'sudo dpkg -i node_latest_armhf.deb'
-    test run of node - calls for version, if version present, then you're ready to move on.
-    'node -v'
+    2.2 Check to see if your pi already has node with:
+        'node -v' 
+        If not, then download latest node version for arm:
+        'wget http://node-arm.herokuapp.com/node_latest_armhf.deb'
+        install that bad boy
+        'sudo dpkg -i node_latest_armhf.deb'
+        test run of node - calls for version, if version present, then you're ready to move on.
+        'node -v'
 
 
 3. Install npm on RPi 
