@@ -33,7 +33,7 @@ console.log(coinbase);
 
 // let's print the balance of the wallet/account to test coinbase settings
 // no worries if this is 0... don't need money to read events!
-var balance = web3.eth.getBalance(defaultAccount);
+var balance = web3.eth.getBalance(coinbase);
 console.log(balance.toString(10));
 
 //  ABI - Application Binary Interface Definition for the contract that we want to interact with.
