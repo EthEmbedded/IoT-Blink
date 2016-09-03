@@ -26,14 +26,14 @@ console.log(web3.version.node);
 
 
 // test to see if a local coinbase is running ... we'll need this account to interact with a contract.
-var coinbase = web3.eth.coinbase;
+var coinbase = web3.eth.defaultAccount;
 
 // if default wallet/account isn't set - this won't have a value.  needed to interact with a contract.
 console.log(coinbase);
 
 // let's print the balance of the wallet/account to test coinbase settings
 // no worries if this is 0... don't need money to read events!
-var balance = web3.eth.getBalance(coinbase);
+var balance = web3.eth.getBalance(defaultAccount);
 console.log(balance.toString(10));
 
 //  ABI - Application Binary Interface Definition for the contract that we want to interact with.
