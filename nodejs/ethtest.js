@@ -26,7 +26,7 @@ console.log(web3.version.node);
 
 
 // test to see if a local coinbase is running ... we'll need this account to interact with a contract.
-var coinbase = web3.eth.defaultAccount;
+var coinbase = web3.eth.accounts[0];
 
 // if default wallet/account isn't set - this won't have a value.  needed to interact with a contract.
 console.log(coinbase);
